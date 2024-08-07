@@ -1,9 +1,16 @@
+import { useQuery } from "@tanstack/react-query";
+import { getAdvice } from "./utils";
+
 export default function App() {
+    const query = useQuery({
+        queryKey: ["get_advice"],
+        queryFn: getAdvice,
+    });
     return (
-        <main className="w-full min-h-screen bg-gradient-to-r from-fuchsia-500 to-cyan-500 flex items-center justify-center">
-            <h1 className="font-mono font-bold text-3xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-                Vite + React + Typescript + SWC + TailwindCSS + GitHub Pages
-            </h1>
+        <main className="flex flex-col justify-center items-center min-h-screen bg-c_Dark_Blue">
+            <div className="rounded-lg bg-c_Dark_Grayish_Blue text-white flex flex-col items-center">
+                <span>{JSON.stringify(query.data)}</span>
+            </div>
         </main>
     );
 }
