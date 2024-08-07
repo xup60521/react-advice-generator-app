@@ -13,7 +13,7 @@ export default function App() {
     return (
         <main className="flex flex-col justify-center items-center min-h-screen bg-c_Dark_Blue p-4">
             <div className="rounded-2xl bg-c_Dark_Grayish_Blue text-white flex flex-col items-center lg:p-12 py-10 px-4 lg:w-[30rem]">
-                <p className="font-manrope text-xs text-c_Neon_Green font-bold tracking-[0.25rem] text-center w-full">
+                <p className="font-manrope text-xs text-c_Neon_Green font-black tracking-[0.25rem] text-center w-full">
                     ADVICE <span>#</span>
                     {data?.slip.id}
                 </p>
